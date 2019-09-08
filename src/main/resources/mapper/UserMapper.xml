@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.taobao.spring.mapper.UserMapper">
+
+    <resultMap id="userResultMap" type="com.taobao.spring.entity.User">
+        <result column="userSex" property="userSex" typeHandler="com.taobao.spring.typehandler.UserSexTypeHandler"/>
+        <result column="status" property="status" typeHandler="com.taobao.spring.typehandler.UserStatusTypeHandler"/>
+    </resultMap>
+
+    <select id="queryUserById" resultMap="userResultMap">
+        select * from user3 where userId=#{userId}
+    </select>
+
+    <select id="queryUserListByStatus" resultMap="userResultMap">
+        select * from user3 where status=#{status,typeHandler=com.taobao.spring.typehandler.UserStatusTypeHandler}
+    </select>
+
+</mapper>
