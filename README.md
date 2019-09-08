@@ -1,4 +1,4 @@
-mvn clean compile sonar:sonar -Dsonar.host.url=http://192.168.102.92:9000 -Dsonar.sourceEncoding=UTF-8 -Dsonar.sources=. -Dsonar.inclusions=src/main/** -X
+mvn clean compile sonar:sonar -Dsonar.host.url=http://192.168.1.100:9000 -Dsonar.sourceEncoding=UTF-8 -Dsonar.sources=. -Dsonar.inclusions=src/main/** -X
 
 sonar-mybatis插件版本：1.0.4 
 <br />
